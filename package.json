@@ -1,0 +1,36 @@
+{
+  "name": "chess-tcn",
+  "version": "1.0.0",
+  "description": "Encode and decode TCN, a move format used by Chess.com's API",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chess-tcn/chess-tcn-js.git"
+  },
+  "keywords": [
+    "chess"
+  ],
+  "author": "chess-tcn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chess-tcn/chess-tcn-js/issues"
+  },
+  "homepage": "https://github.com/chess-tcn/chess-tcn-js#readme",
+  "jest": {
+    "roots": ["<rootDir>/tests"],
+    "testMatch": ["**/tests/**/*.test.js"]
+  },
+  "dependencies": {
+    "chess.js": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "eslint": "^9.30.1",
+    "jest": "^30.0.4"
+  }
+}
