@@ -1,6 +1,6 @@
 {
   "name": "chess-tcn",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Encode and decode TCN, a move format used by Chess.com's API",
   "main": "src/index.js",
   "types": "src/index.d.ts",
