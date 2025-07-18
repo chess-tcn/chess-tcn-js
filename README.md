@@ -24,17 +24,29 @@ npm install chess-tcn
 Here’s a quick example of how to use the package:
 
 ```javascript
-import { tcnToPgn, pgnToTcn } from 'chess-tcn';
+import { decodeTCN, encodeTCN, tcnToPgn, pgnToTcn } from "chess-tcn";
 
-// Decode TCN to PGN
-const tcnString = 'mC0Kgv7Tbq5Qlt9IqHT7cM1TMFWOHs2MFwZRfm6Eeg';
+const tcnString = "mC0Kgv7Tbq5Qlt9IqHT7cM1TMFWOHs2MFwZRfm6Eeg";
+
+// Decode a raw TCN string into move objects
+const moves = decodeTCN(tcnString);
+console.log("Decoded moves:", moves);
+
+// Encode those move objects back into TCN
+const newTcn = encodeTCN(moves);
+console.log("Re-encoded TCN:", newTcn);
+
+// Convert a raw TCN string to PGN
 const pgn = tcnToPgn(tcnString);
-console.log(pgn);
+console.log("PGN:", pgn);
 
-// Encode PGN back to TCN
+// Convert PGN back into a TCN string
 const newTcnString = pgnToTcn(pgn);
-console.log(newTcnString);
+console.log("New TCN string:", newTcnString);
 ```
+
+## API Reference
+For complete details on usage, check out the [documentation](https://chess-tcn.github.io/docs).
 
 ## License
 This project is licensed under the MIT License. See below for full text.
